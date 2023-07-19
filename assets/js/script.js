@@ -6,7 +6,7 @@ var inputValue = $('.inputTxt').val();
 // function to fetch API, then concat into next API call
 function getLatLong () {
 var inputValue = $('.inputTxt').val();
-var apiURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + inputValue + '&limit=1&appid=633f2ef3a054cf44fe6adc7f6717f94c'
+var apiURL = 'https://api.openweathermap.org/geo/1.0/direct?q=' + inputValue + '&limit=1&appid=633f2ef3a054cf44fe6adc7f6717f94c'
 fetch(apiURL)
 .then(function (response){
   return response.json();
@@ -17,7 +17,7 @@ fetch(apiURL)
   var lonInput = (data[i].lon);
   console.log(latInput);
   console.log(data);
-  var weatherURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + latInput + '&lon=' + lonInput + '&appid=633f2ef3a054cf44fe6adc7f6717f94c&units=imperial';
+  var weatherURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + latInput + '&lon=' + lonInput + '&appid=633f2ef3a054cf44fe6adc7f6717f94c&units=imperial';
   
   fetch(weatherURL)
   .then(function (response){
